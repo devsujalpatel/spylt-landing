@@ -1,5 +1,13 @@
+import { Navbar } from "./components/navbar";
+import { HeroSection } from "./sections/hero-section";
+
 const App = () => {
-  return <div className="text-4xl underline">Hello World</div>;
+  return (
+    <main>
+      <Navbar />
+      <HeroSection />
+    </main>
+  );
 };
 
 export default App;
