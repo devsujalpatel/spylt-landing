@@ -6,29 +6,27 @@ import { useRef } from "react";
 export const FlavorSlider = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(
-    () => {
-      if (!sliderRef.current) return;
+  useGSAP(() => {
+    if (!sliderRef.current) return;
 
-      const scrollAmount = sliderRef.current.scrollWidth - window.innerWidth;
+    const scrollAmount = sliderRef.current.scrollWidth - window.innerWidth;
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".flavor-section",
-          start: "2% top",
-          end: "+=1500px",
-          scrub: true,
-          markers: true,
-        },
-      });
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".flavor-section",
+        start: "2% top",
+        end: `+=${scrollAmount + 1500}px`,
+        pin: true,
+        scrub: true,
+        // markers: true,
+      },
+    });
 
-      tl.to(".flavor-section", {
-        x: "-1500px",
-        ease: "power1.inOut",
-      });
-    },
-    { scope: sliderRef },
-  );
+    tl.to(".flavor-section", {
+      x: `-${scrollAmount + 1500}px`,
+      ease: "power1.inOut",
+    });
+  });
 
   return (
     <div ref={sliderRef} className="slider-wrapper">
