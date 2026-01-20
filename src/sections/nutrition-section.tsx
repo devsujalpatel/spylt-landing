@@ -33,7 +33,7 @@ export const NutritionSection = () => {
       scrollTrigger: {
         trigger: ".nutrition-section",
         start: "top center",
-        markers: true,
+        // markers: true,
       },
     });
 
@@ -50,6 +50,21 @@ export const NutritionSection = () => {
         ease: "power1.inOut",
         duration: 1,
       });
+
+    const titleTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".nutrition-section",
+        start: "top 80%",
+        // markers: true,
+      },
+    });
+
+    titleTl.to(".nutrition-text-scroll", {
+      duration: 1,
+      opacity: 1,
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      ease: "power1.inOut",
+    });
   });
 
   return (
@@ -66,7 +81,12 @@ export const NutritionSection = () => {
             <div className="overflow-hidden place-self-start">
               <h1 className="nutrition-title">Is still does</h1>
             </div>
-            <div style={{}} className="nutrition-text-scroll place-self-start">
+            <div
+              style={{
+                clipPath: "polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)",
+              }}
+              className="nutrition-text-scroll place-self-start"
+            >
               <div className="bg-yellow-brown pb-5 md:pt-0 pt-3 md:px-5 px-3 inline-block">
                 <h2 className="text-milk-yellow">Body Good</h2>
               </div>
