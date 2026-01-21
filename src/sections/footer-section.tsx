@@ -38,14 +38,26 @@ export const FooterSection = () => {
               <a>SPYLT Flavors</a>
             </div>
             <div>
-              <a>Chug Club</a>
-              <a>Student Marketing</a>
-              <a>Dairy Dealers</a>
+              <p>
+                <a>Chug Club</a>
+              </p>
+              <p>
+                <a>Student Marketing</a>
+              </p>
+              <p>
+                <a>Dairy Dealers</a>
+              </p>
             </div>
             <div>
-              <a>Company</a>
-              <a>Contacts</a>
-              <a>Tasty Talk</a>
+              <p>
+                <a>Company</a>
+              </p>
+              <p>
+                <a>Contacts</a>
+              </p>
+              <p>
+                <a>Tasty Talk</a>
+              </p>
             </div>
           </div>
 
@@ -82,8 +94,12 @@ export const FooterSection = () => {
         <div className="copyright-box">
           <p>Copyright © 2025 Spylt - All Rights Reserved</p>
           <div className="flex items-center gap-7">
-            <a>Privacy Policy</a>
-            <a>Terms of Service</a>
+            <p>
+              <a>Privacy Policy</a>
+            </p>
+            <p>
+              <a>Terms of Service</a>
+            </p>
           </div>
         </div>
       </div>
