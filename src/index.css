@@ -262,6 +262,9 @@ body::-webkit-scrollbar {
       p {
         @apply text-center;
       }
+      a {
+        @apply hover:underline cursor-pointer text-center;
+      }
     }
   }
 }
